@@ -156,6 +156,8 @@ blockquote { font: 500 clamp(28px, 3.6vw, 43px)/1.35 var(--serif); margin: 20px 
 .back-top { font-size: 11px; text-decoration: none; color: #e0e7dc; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.14); padding-top: 16px; padding-bottom: 18px; display: flex; gap: 20px; justify-content: space-between; color: #b9c6ba; font-size: 9px; }
 .footer-bottom a { color: #e1e8dd; text-decoration: none; }
+.footer-bottom a.admin-link { opacity: .75; text-decoration: underline; text-underline-offset: 3px; }
+.footer-bottom a.admin-link:hover { opacity: 1; }
 /* Gallery: classes & postures */
 .gallery { background: var(--paper); }
 .theme { margin-top: 84px; }

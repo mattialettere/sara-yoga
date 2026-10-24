@@ -355,7 +355,7 @@ ${themes}
       <p>${h(c.footer_tagline)}</p>
       <a class="back-top" href="#top">${h(c.footer_back)} ↑</a>
     </div>
-    <div class="container footer-bottom"><span>© <span id="year">${year}</span> ${h(c.footer_name)}</span><span>${h(c.footer_made)}</span><a href="${mailto}">${h(c.footer_contact)}</a></div>
+    <div class="container footer-bottom"><span>© <span id="year">${year}</span> ${h(c.footer_name)}</span><span>${h(c.footer_made)}</span><a href="${mailto}">${h(c.footer_contact)}</a><a class="admin-link" href="admin/">Area amministratore</a></div>
   </footer>
   <dialog id="lightbox" class="lightbox" aria-label="Enlarged photo">
     <figure>
