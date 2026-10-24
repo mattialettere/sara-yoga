@@ -1,0 +1,1173 @@
+[
+ {
+  "id": "settings",
+  "title": "Contatti e informazioni",
+  "icon": "mail",
+  "help": "I dati che servono per essere contattati e trovati su Google.",
+  "fields": [
+   {
+    "key": "contact_email",
+    "type": "email",
+    "label": "Email per le prenotazioni",
+    "default": "",
+    "help": "I pulsanti «Scrivi a Sara» apriranno la posta con questo indirizzo. Importante: inseriscila prima di pubblicare il sito."
+   },
+   {
+    "key": "registration_url",
+    "type": "url",
+    "label": "Link al modulo di iscrizione",
+    "default": "",
+    "help": "Indirizzo completo, ad esempio https://forms.gle/… Finché è vuoto, chi clicca vede un avviso."
+   },
+   {
+    "key": "divider_site",
+    "type": "divider",
+    "label": "Indirizzo del sito e contatore visite"
+   },
+   {
+    "key": "site_url",
+    "type": "url",
+    "label": "Indirizzo del sito",
+    "default": "https://www.sarashanti.co.uk/",
+    "help": "L'indirizzo pubblico completo (con https://). Serve a Google e alle anteprime sui social."
+   },
+   {
+    "key": "stats_url",
+    "type": "url",
+    "label": "Indirizzo del contatore visite",
+    "default": "",
+    "help": "Compare dopo aver attivato il contatore (vedi «Collegamenti»). Finché è vuoto le visite non vengono contate."
+   },
+   {
+    "key": "divider_venue",
+    "type": "divider",
+    "label": "Dove si tiene la lezione"
+   },
+   {
+    "key": "venue_name",
+    "type": "text",
+    "label": "Nome del posto",
+    "default": "St Denys Social Club"
+   },
+   {
+    "key": "venue_street",
+    "type": "text",
+    "label": "Via e numero",
+    "default": "100 St Denys Road"
+   },
+   {
+    "key": "venue_city",
+    "type": "text",
+    "label": "Città",
+    "default": "Southampton"
+   },
+   {
+    "key": "venue_postcode",
+    "type": "text",
+    "label": "Codice postale",
+    "default": "SO17 2FP"
+   },
+   {
+    "key": "divider_google",
+    "type": "divider",
+    "label": "Come appare il sito su Google"
+   },
+   {
+    "key": "site_title",
+    "type": "text",
+    "label": "Titolo nella scheda del browser e su Google",
+    "max": 110,
+    "default": "Yoga Classes in Southampton | Sara Shanti – Sivananda Hatha Yoga",
+    "help": "Meglio sotto i 60 caratteri circa."
+   },
+   {
+    "key": "site_description",
+    "type": "textarea",
+    "label": "Breve descrizione su Google",
+    "max": 300,
+    "rows": 3,
+    "default": "Join Sara Shanti for welcoming Sivananda Hatha Yoga classes in Southampton. Enjoy a balanced 75-minute practice with breathing, postures and deep relaxation. Beginners are welcome.",
+    "help": "Una o due frasi, circa 150 caratteri."
+   },
+   {
+    "key": "seo_day",
+    "type": "select",
+    "label": "Giorno della lezione (per Google)",
+    "options": [
+     {
+      "value": "Monday",
+      "label": "Lunedì"
+     },
+     {
+      "value": "Tuesday",
+      "label": "Martedì"
+     },
+     {
+      "value": "Wednesday",
+      "label": "Mercoledì"
+     },
+     {
+      "value": "Thursday",
+      "label": "Giovedì"
+     },
+     {
+      "value": "Friday",
+      "label": "Venerdì"
+     },
+     {
+      "value": "Saturday",
+      "label": "Sabato"
+     },
+     {
+      "value": "Sunday",
+      "label": "Domenica"
+     }
+    ],
+    "default": "Thursday",
+    "help": "Serve solo ai motori di ricerca. Il testo mostrato sul sito si cambia nella sezione «Date e luogo»."
+   },
+   {
+    "key": "seo_start",
+    "type": "time",
+    "label": "Ora di inizio (per Google)",
+    "default": "20:00"
+   },
+   {
+    "key": "seo_end",
+    "type": "time",
+    "label": "Ora di fine (per Google)",
+    "default": "21:15"
+   }
+  ]
+ },
+ {
+  "id": "header",
+  "title": "Logo, menu e fondo pagina",
+  "icon": "menu",
+  "help": "Le scritte nella barra in alto e in fondo a ogni pagina.",
+  "fields": [
+   {
+    "key": "brand_name",
+    "type": "title",
+    "label": "Nome nel logo",
+    "default": "Sara *Shanti*",
+    "help": "Invio = vai a capo. Per il corsivo colorato seleziona le parole e premi «Corsivo».",
+    "rows": 1
+   },
+   {
+    "key": "brand_tag",
+    "type": "text",
+    "label": "Scritta piccola sotto il nome",
+    "default": "YOGA · SOUTHAMPTON"
+   },
+   {
+    "key": "divider_menu",
+    "type": "divider",
+    "label": "Voci del menu"
+   },
+   {
+    "key": "nav_about",
+    "type": "text",
+    "label": "Voce 1 (porta a «Chi sono»)",
+    "default": "My approach"
+   },
+   {
+    "key": "nav_classes",
+    "type": "text",
+    "label": "Voce 2 (porta alle lezioni)",
+    "default": "Classes"
+   },
+   {
+    "key": "nav_gallery",
+    "type": "text",
+    "label": "Voce 3 (porta alla galleria)",
+    "default": "Gallery"
+   },
+   {
+    "key": "nav_pricing",
+    "type": "text",
+    "label": "Voce 4 (porta ai prezzi)",
+    "default": "Pricing"
+   },
+   {
+    "key": "nav_location",
+    "type": "text",
+    "label": "Voce 5 (porta a date e luogo)",
+    "default": "Location"
+   },
+   {
+    "key": "nav_cta",
+    "type": "text",
+    "label": "Pulsante scuro del menu",
+    "default": "Book a class"
+   },
+   {
+    "key": "divider_footer",
+    "type": "divider",
+    "label": "Fondo pagina"
+   },
+   {
+    "key": "footer_tagline",
+    "type": "text",
+    "label": "Frase nel fondo pagina",
+    "default": "A friendly space to breathe, move and belong."
+   },
+   {
+    "key": "footer_back",
+    "type": "text",
+    "label": "Link «torna su»",
+    "default": "Back to top"
+   },
+   {
+    "key": "footer_name",
+    "type": "text",
+    "label": "Nome accanto al © (l'anno si aggiorna da solo)",
+    "default": "Sara Shanti Yoga"
+   },
+   {
+    "key": "footer_made",
+    "type": "text",
+    "label": "Scritta al centro",
+    "default": "Made with care in Southampton, UK"
+   },
+   {
+    "key": "footer_contact",
+    "type": "text",
+    "label": "Link contatto",
+    "default": "Get in touch"
+   }
+  ]
+ },
+ {
+  "id": "hero",
+  "title": "Copertina (inizio pagina)",
+  "icon": "home",
+  "help": "Quello che si vede appena si apre il sito.",
+  "fields": [
+   {
+    "key": "hero_image",
+    "type": "image",
+    "label": "Foto di sfondo",
+    "default": "assets/yoga-beach.jpg",
+    "help": "Meglio una foto orizzontale. Viene usata anche come anteprima quando il sito è condiviso sui social."
+   },
+   {
+    "key": "hero_alt",
+    "type": "text",
+    "label": "Descrizione della foto",
+    "default": "A small group practising yoga together on a peaceful beach",
+    "help": "Per chi non può vedere la foto e per Google."
+   },
+   {
+    "key": "hero_eyebrow",
+    "type": "text",
+    "label": "Scritta piccola sopra il titolo",
+    "default": "BREATHE · MOVE · BELONG"
+   },
+   {
+    "key": "hero_title",
+    "type": "title",
+    "label": "Titolo grande",
+    "default": "Find your calm.\n*Come as you are.*",
+    "help": "Invio = vai a capo. Per il corsivo colorato seleziona le parole e premi «Corsivo»."
+   },
+   {
+    "key": "hero_copy",
+    "type": "textarea",
+    "label": "Testo sotto il titolo",
+    "default": "Friendly, traditional Hatha Yoga in Southampton — a little space in your week to slow down, reconnect and feel good in your body.",
+    "rows": 3
+   },
+   {
+    "key": "hero_btn",
+    "type": "text",
+    "label": "Pulsante bianco",
+    "default": "Join a class"
+   },
+   {
+    "key": "hero_link",
+    "type": "text",
+    "label": "Link accanto al pulsante",
+    "default": "Get to know me"
+   },
+   {
+    "key": "hero_note_title",
+    "type": "text",
+    "label": "Nota in evidenza: titolo",
+    "default": "New to yoga?"
+   },
+   {
+    "key": "hero_note_text",
+    "type": "text",
+    "label": "Nota in evidenza: testo",
+    "default": "You're very welcome here."
+   },
+   {
+    "key": "hero_caption",
+    "type": "text",
+    "label": "Didascalia in basso a destra",
+    "default": "A welcoming yoga community in Southampton"
+   }
+  ]
+ },
+ {
+  "id": "intro",
+  "title": "Introduzione",
+  "icon": "text",
+  "help": "La prima frase che spiega lo spirito delle lezioni.",
+  "fields": [
+   {
+    "key": "intro_label",
+    "type": "title",
+    "label": "Etichetta a sinistra",
+    "default": "A PRACTICE FOR\nREAL LIFE",
+    "help": "Invio = vai a capo."
+   },
+   {
+    "key": "intro_eyebrow",
+    "type": "text",
+    "label": "Scritta piccola sopra il titolo",
+    "default": "A LITTLE PAUSE IN YOUR WEEK"
+   },
+   {
+    "key": "intro_title",
+    "type": "title",
+    "label": "Titolo",
+    "default": "Yoga isn't about touching your toes.\n*It's about coming home to yourself.*",
+    "help": "Invio = vai a capo. Per il corsivo colorato seleziona le parole e premi «Corsivo»."
+   },
+   {
+    "key": "intro_text",
+    "type": "textarea",
+    "label": "Testo",
+    "rows": 5,
+    "default": "Life can be busy. Our classes offer a warm, judgement-free place to breathe a little deeper, move with intention and leave feeling more grounded. No competition, no pressure and no need to be flexible."
+   }
+  ]
+ },
+ {
+  "id": "about",
+  "title": "Chi sono",
+  "icon": "user",
+  "help": "La presentazione di Sara.",
+  "fields": [
+   {
+    "key": "about_image",
+    "type": "image",
+    "label": "Foto",
+    "default": "assets/yoga-park.jpg",
+    "help": "Viene ritagliata in formato verticale (4:5): meglio una foto con il soggetto al centro."
+   },
+   {
+    "key": "about_alt",
+    "type": "text",
+    "label": "Descrizione della foto",
+    "default": "A group of people practising yoga outdoors in a leafy park at golden hour"
+   },
+   {
+    "key": "about_stamp_num",
+    "type": "text",
+    "label": "Bollino rotondo: numero",
+    "default": "16+",
+    "max": 8
+   },
+   {
+    "key": "about_stamp_text",
+    "type": "title",
+    "label": "Bollino rotondo: testo",
+    "default": "YEARS OF\nPERSONAL PRACTICE",
+    "help": "Invio = vai a capo."
+   },
+   {
+    "key": "about_eyebrow",
+    "type": "text",
+    "label": "Scritta piccola sopra il titolo",
+    "default": "HELLO, I'M SARA"
+   },
+   {
+    "key": "about_title",
+    "type": "title",
+    "label": "Titolo",
+    "default": "So glad\n*you're here.*",
+    "help": "Invio = vai a capo. Per il corsivo colorato seleziona le parole e premi «Corsivo»."
+   },
+   {
+    "key": "about_script",
+    "type": "text",
+    "label": "Firma",
+    "default": "Warmly, Shanti Sara"
+   },
+   {
+    "key": "about_text",
+    "type": "paragraphs",
+    "label": "Testo",
+    "rows": 12,
+    "help": "Lascia una riga vuota tra un paragrafo e l'altro.",
+    "default": "I've been practising yoga for over 16 years, and following my heart led me to become a certified Sivananda Hatha Yoga Teacher (Siromani).\n\nThis summer, I started teaching a small yoga class in the park. What began as a simple idea grew into a lovely group of 8–10 wonderful souls. Watching our friendly community grow week by week has been an absolute joy.\n\nAs the seasons change, we're bringing our practice indoors to a cosy studio space. Whether you've joined me before or are stepping onto a yoga mat for the very first time, there's a place for you here."
+   },
+   {
+    "key": "about_link",
+    "type": "text",
+    "label": "Link in fondo",
+    "default": "Discover our classes"
+   }
+  ]
+ },
+ {
+  "id": "practice",
+  "title": "La lezione",
+  "icon": "leaf",
+  "help": "Come si svolge una lezione, in tre momenti.",
+  "fields": [
+   {
+    "key": "practice_eyebrow",
+    "type": "text",
+    "label": "Scritta piccola sopra il titolo",
+    "default": "THE CLASS EXPERIENCE"
+   },
+   {
+    "key": "practice_title",
+    "type": "title",
+    "label": "Titolo",
+    "default": "Traditional practice.\n*Space to be yourself.*",
+    "help": "Invio = vai a capo. Per il corsivo colorato seleziona le parole e premi «Corsivo»."
+   },
+   {
+    "key": "practice_text",
+    "type": "textarea",
+    "label": "Testo sotto il titolo",
+    "rows": 3,
+    "default": "Each 75-minute class follows the balanced principles of classical Sivananda Hatha Yoga, with room to listen to your own body and find your own pace."
+   },
+   {
+    "key": "practice_cards",
+    "type": "list",
+    "label": "Schede (i momenti della lezione)",
+    "item_label": "Scheda",
+    "add_label": "Aggiungi una scheda",
+    "title_key": "title",
+    "fields": [
+     {
+      "key": "title",
+      "type": "text",
+      "label": "Titolo"
+     },
+     {
+      "key": "text",
+      "type": "textarea",
+      "label": "Testo",
+      "rows": 3
+     }
+    ],
+    "default": [
+     {
+      "title": "Breathe",
+      "text": "Pranayama breathing practices to settle the mind, bring awareness to the present and create a sense of calm."
+     },
+     {
+      "title": "Move & strengthen",
+      "text": "Accessible asanas (yoga postures) to gently build strength, mobility, balance and body awareness."
+     },
+     {
+      "title": "Rest deeply",
+      "text": "A restorative final relaxation to let go of tension and leave feeling centred, refreshed and recharged."
+     }
+    ]
+   },
+   {
+    "key": "practice_pills",
+    "type": "list",
+    "label": "Strisca con i punti chiave",
+    "item_label": "Punto",
+    "add_label": "Aggiungi un punto",
+    "title_key": "text",
+    "fields": [
+     {
+      "key": "text",
+      "type": "text",
+      "label": "Testo",
+      "max": 60
+     }
+    ],
+    "default": [
+     {
+      "text": "75 minutes"
+     },
+     {
+      "text": "All levels welcome"
+     },
+     {
+      "text": "No pressure, ever"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "gallery",
+  "title": "Galleria foto",
+  "icon": "image",
+  "help": "Le foto del sito, raggruppate per tema. Puoi cambiare, aggiungere, togliere e spostare le foto.",
+  "fields": [
+   {
+    "key": "gallery_eyebrow",
+    "type": "text",
+    "label": "Scritta piccola sopra il titolo",
+    "default": "OUR CLASSES & POSTURES"
+   },
+   {
+    "key": "gallery_title",
+    "type": "title",
+    "label": "Titolo",
+    "default": "In the park, on the mat,\n*and in stillness.*",
+    "help": "Invio = vai a capo. Per il corsivo colorato seleziona le parole e premi «Corsivo»."
+   },
+   {
+    "key": "gallery_text",
+    "type": "textarea",
+    "label": "Testo sotto il titolo",
+    "rows": 3,
+    "default": "A little glimpse of the practice — from sunlit sessions in the park to gentle stretching and quiet moments of mindfulness."
+   },
+   {
+    "key": "gallery_themes",
+    "type": "list",
+    "label": "Temi della galleria",
+    "item_label": "Tema",
+    "add_label": "Aggiungi un tema",
+    "title_key": "title",
+    "fields": [
+     {
+      "key": "eyebrow",
+      "type": "text",
+      "label": "Scritta piccola"
+     },
+     {
+      "key": "title",
+      "type": "text",
+      "label": "Titolo del tema"
+     },
+     {
+      "key": "text",
+      "type": "textarea",
+      "label": "Testo",
+      "rows": 4
+     },
+     {
+      "key": "layout",
+      "type": "select",
+      "label": "Disposizione",
+      "default": "normal",
+      "options": [
+       {
+        "value": "normal",
+        "label": "Testo sopra, foto sotto"
+       },
+       {
+        "value": "split",
+        "label": "Testo a sinistra, foto a destra"
+       }
+      ]
+     },
+     {
+      "key": "link",
+      "type": "text",
+      "label": "Link (solo con testo a sinistra, lascia vuoto per nasconderlo)"
+     },
+     {
+      "key": "photos",
+      "type": "list",
+      "label": "Foto",
+      "item_label": "Foto",
+      "add_label": "Aggiungi una foto",
+      "title_key": "caption",
+      "max_items": 6,
+      "fields": [
+       {
+        "key": "src",
+        "type": "image",
+        "label": "Foto"
+       },
+       {
+        "key": "caption",
+        "type": "text",
+        "label": "Didascalia (appare sopra la foto)"
+       },
+       {
+        "key": "alt",
+        "type": "text",
+        "label": "Descrizione della foto (per chi non vede e per Google)"
+       }
+      ]
+     }
+    ],
+    "default": [
+     {
+      "eyebrow": "PARK YOGA · COMMUNITY SESSIONS",
+      "title": "Yoga in the open air",
+      "layout": "normal",
+      "link": "",
+      "text": "Our little community began outdoors, practising together on the grass. Fresh air, soft evening light and friendly faces — a lovely way to reconnect with your breath and with nature.",
+      "photos": [
+       {
+        "src": "assets/park-yoga-low-lunge.jpg",
+        "caption": "Low lunge, arms raised",
+        "alt": "A group practising a low lunge with arms raised towards the sun in a woodland clearing"
+       },
+       {
+        "src": "assets/park-yoga-tree-pose.jpg",
+        "caption": "Tree pose (Vrksasana)",
+        "alt": "A person in tree pose with arms raised, silhouetted against the setting sun between tall pine trees"
+       },
+       {
+        "src": "assets/park-yoga-plank.jpg",
+        "caption": "Plank in the park",
+        "alt": "A yoga class holding plank pose on the grass in golden afternoon light"
+       }
+      ]
+     },
+     {
+      "eyebrow": "HATHA YOGA & STRETCHING",
+      "title": "Gentle strength, steady breath",
+      "layout": "normal",
+      "link": "",
+      "text": "Classical Hatha postures held with awareness — opening the body, building strength and releasing tension. Every posture can be adapted, so you can always work at your own pace.",
+      "photos": [
+       {
+        "src": "assets/hatha-mat-practice.jpg",
+        "caption": "Finding your footing",
+        "alt": "Hands and bare feet planted on a green yoga mat in warm window light"
+       },
+       {
+        "src": "assets/hatha-childs-pose.jpg",
+        "caption": "Child's pose (Balasana)",
+        "alt": "A woman resting in child's pose on a red yoga mat, hands together in front of her"
+       },
+       {
+        "src": "assets/stretch-forward-fold.jpg",
+        "caption": "Forward fold (Uttanasana)",
+        "alt": "A person folding forward from standing, hands reaching down towards the floor beside their feet"
+       }
+      ]
+     },
+     {
+      "eyebrow": "MEDITATION & MINDFULNESS",
+      "title": "A moment of stillness",
+      "layout": "split",
+      "link": "Join us on the mat",
+      "text": "Every class ends with deep relaxation, and we take time to simply sit, breathe and notice. No experience needed — just a few quiet minutes to arrive, settle and feel at home in yourself.",
+      "photos": [
+       {
+        "src": "assets/meditation-sunset-mudra.jpg",
+        "caption": "Chin mudra at sunset",
+        "alt": "A hand resting on a knee in chin mudra, with a glowing sunset behind"
+       },
+       {
+        "src": "assets/meditation-circle.jpg",
+        "caption": "Closing circle",
+        "alt": "A teacher sitting cross-legged on a mat facing two smiling students in a park at sunset"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "quote",
+  "title": "Frase in evidenza",
+  "icon": "quote",
+  "help": "La frase su fondo colorato a metà pagina.",
+  "fields": [
+   {
+    "key": "quote_text",
+    "type": "title",
+    "label": "Frase",
+    "default": "You don't have to be good at yoga.\n*You just have to show up.*",
+    "help": "Invio = vai a capo. Per il corsivo colorato seleziona le parole e premi «Corsivo»."
+   },
+   {
+    "key": "quote_sub",
+    "type": "text",
+    "label": "Frase piccola sotto",
+    "default": "Bring your breath, your body and whatever kind of day you've had."
+   }
+  ]
+ },
+ {
+  "id": "schedule",
+  "title": "Date e luogo",
+  "icon": "calendar",
+  "help": "Giorno, orario, indirizzo e calendario delle prossime lezioni. Quella da aggiornare più spesso!",
+  "fields": [
+   {
+    "key": "sched_eyebrow",
+    "type": "text",
+    "label": "Scritta piccola sopra il titolo",
+    "default": "COME PRACTISE WITH US"
+   },
+   {
+    "key": "sched_title",
+    "type": "title",
+    "label": "Titolo",
+    "default": "Your Thursday\n*reset.*",
+    "help": "Invio = vai a capo. Per il corsivo colorato seleziona le parole e premi «Corsivo»."
+   },
+   {
+    "key": "sched_text",
+    "type": "textarea",
+    "label": "Testo",
+    "rows": 3,
+    "default": "As autumn settles in, we're moving indoors to a warm, welcoming space for our weekly practice."
+   },
+   {
+    "key": "sched_when",
+    "type": "text",
+    "label": "Giorno e orario",
+    "default": "Every Thursday · 8:00–9:15 pm"
+   },
+   {
+    "key": "sched_when_small",
+    "type": "text",
+    "label": "Nota sotto giorno e orario",
+    "default": "A 75-minute evening class"
+   },
+   {
+    "key": "sched_directions",
+    "type": "text",
+    "label": "Link «come arrivare» (apre Google Maps con l'indirizzo inserito in «Contatti e informazioni»)",
+    "default": "Get directions"
+   },
+   {
+    "key": "divider_dates",
+    "type": "divider",
+    "label": "Riquadro con le date"
+   },
+   {
+    "key": "dates_eyebrow",
+    "type": "text",
+    "label": "Scritta piccola",
+    "default": "AUTUMN / WINTER"
+   },
+   {
+    "key": "dates_title",
+    "type": "text",
+    "label": "Titolo del riquadro",
+    "default": "Upcoming class dates"
+   },
+   {
+    "key": "dates_note",
+    "type": "text",
+    "label": "Nota sotto il titolo",
+    "default": "Please book ahead — spaces are limited."
+   },
+   {
+    "key": "dates_list",
+    "type": "list",
+    "label": "Date delle lezioni",
+    "item_label": "Data",
+    "add_label": "Aggiungi una data",
+    "title_key": "date",
+    "max_items": 30,
+    "inline": true,
+    "fields": [
+     {
+      "key": "dow",
+      "type": "text",
+      "label": "Giorno (abbreviato)",
+      "max": 8
+     },
+     {
+      "key": "date",
+      "type": "text",
+      "label": "Data",
+      "max": 30
+     },
+     {
+      "key": "time",
+      "type": "text",
+      "label": "Ora",
+      "max": 20
+     }
+    ],
+    "default": [
+     {
+      "dow": "THU",
+      "date": "22 October",
+      "time": "8:00 pm"
+     },
+     {
+      "dow": "THU",
+      "date": "29 October",
+      "time": "8:00 pm"
+     },
+     {
+      "dow": "THU",
+      "date": "5 November",
+      "time": "8:00 pm"
+     },
+     {
+      "dow": "THU",
+      "date": "19 November",
+      "time": "8:00 pm"
+     },
+     {
+      "dow": "THU",
+      "date": "3 December",
+      "time": "8:00 pm"
+     },
+     {
+      "dow": "THU",
+      "date": "10 December",
+      "time": "8:00 pm"
+     }
+    ]
+   },
+   {
+    "key": "dates_btn",
+    "type": "text",
+    "label": "Pulsante",
+    "default": "Reserve your space"
+   },
+   {
+    "key": "dates_disclaimer",
+    "type": "text",
+    "label": "Nota in fondo",
+    "default": "Dates shown for the 2026 autumn/winter season. Please confirm availability when booking."
+   }
+  ]
+ },
+ {
+  "id": "pricing",
+  "title": "Prezzi",
+  "icon": "tag",
+  "help": "Le tariffe delle lezioni.",
+  "fields": [
+   {
+    "key": "pricing_eyebrow",
+    "type": "text",
+    "label": "Scritta piccola sopra il titolo",
+    "default": "SIMPLE, FLEXIBLE PRICING"
+   },
+   {
+    "key": "pricing_title",
+    "type": "title",
+    "label": "Titolo",
+    "default": "Make space\n*for yourself.*",
+    "help": "Invio = vai a capo. Per il corsivo colorato seleziona le parole e premi «Corsivo»."
+   },
+   {
+    "key": "pricing_text",
+    "type": "textarea",
+    "label": "Testo",
+    "rows": 4,
+    "default": "Choose the option that works for you. Come when you can, build a regular rhythm when you're ready, and remember that this is your practice."
+   },
+   {
+    "key": "kind_title",
+    "type": "text",
+    "label": "Riquadro gentile: titolo",
+    "default": "Yoga should be accessible."
+   },
+   {
+    "key": "kind_text",
+    "type": "textarea",
+    "label": "Riquadro gentile: testo",
+    "rows": 3,
+    "default": "If the class fee is difficult for you at the moment, please message me privately. No explanations needed and no questions asked."
+   },
+   {
+    "key": "price_cards",
+    "type": "list",
+    "label": "Tariffe",
+    "item_label": "Tariffa",
+    "add_label": "Aggiungi una tariffa",
+    "title_key": "title",
+    "max_items": 4,
+    "fields": [
+     {
+      "key": "eyebrow",
+      "type": "text",
+      "label": "Scritta piccola"
+     },
+     {
+      "key": "title",
+      "type": "text",
+      "label": "Nome"
+     },
+     {
+      "key": "currency",
+      "type": "text",
+      "label": "Valuta",
+      "max": 4
+     },
+     {
+      "key": "price",
+      "type": "text",
+      "label": "Prezzo (solo numero)",
+      "max": 8
+     },
+     {
+      "key": "unit",
+      "type": "text",
+      "label": "Dopo il prezzo",
+      "max": 20
+     },
+     {
+      "key": "text",
+      "type": "textarea",
+      "label": "Descrizione",
+      "rows": 3
+     },
+     {
+      "key": "button",
+      "type": "text",
+      "label": "Testo del pulsante"
+     },
+     {
+      "key": "tag",
+      "type": "text",
+      "label": "Etichetta «in evidenza» (se compilata, la tariffa risalta)",
+      "max": 40
+     }
+    ],
+    "default": [
+     {
+      "eyebrow": "TRY A CLASS",
+      "title": "Drop-in",
+      "currency": "£",
+      "price": "10",
+      "unit": "/ class",
+      "text": "Perfect if you'd like to come along and see how the practice feels.",
+      "button": "Book a single class",
+      "tag": ""
+     },
+     {
+      "eyebrow": "PRACTISE REGULARLY",
+      "title": "Class bundle",
+      "currency": "£",
+      "price": "8",
+      "unit": "/ class",
+      "text": "Buy 4 or more classes and enjoy the reduced rate. Your bundle is valid for 3 full months.",
+      "button": "Ask about a bundle",
+      "tag": "A LITTLE MORE FLEXIBILITY"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "faq",
+  "title": "Domande frequenti",
+  "icon": "help",
+  "help": "Le domande che le persone fanno più spesso.",
+  "fields": [
+   {
+    "key": "faq_eyebrow",
+    "type": "text",
+    "label": "Scritta piccola sopra il titolo",
+    "default": "A FEW GENTLE ANSWERS"
+   },
+   {
+    "key": "faq_title",
+    "type": "title",
+    "label": "Titolo",
+    "default": "First time?\n*You're in good hands.*",
+    "help": "Invio = vai a capo. Per il corsivo colorato seleziona le parole e premi «Corsivo»."
+   },
+   {
+    "key": "faq_list",
+    "type": "list",
+    "label": "Domande e risposte",
+    "item_label": "Domanda",
+    "add_label": "Aggiungi una domanda",
+    "title_key": "q",
+    "max_items": 20,
+    "fields": [
+     {
+      "key": "q",
+      "type": "text",
+      "label": "Domanda",
+      "max": 200
+     },
+     {
+      "key": "a",
+      "type": "textarea",
+      "label": "Risposta",
+      "rows": 4
+     }
+    ],
+    "default": [
+     {
+      "q": "Do I need yoga experience?",
+      "a": "Not at all. Beginners are very welcome. I'll encourage you to work at a pace that feels comfortable for your body."
+     },
+     {
+      "q": "What if I'm not flexible?",
+      "a": "You don't need to be flexible to start yoga. The practice is about awareness, breathing and meeting yourself where you are — not achieving a perfect pose."
+     },
+     {
+      "q": "What should I bring?",
+      "a": "Wear comfortable clothes that let you move. Please ask when booking whether mats and any other equipment are provided, or bring your own mat if you have one."
+     },
+     {
+      "q": "Do I need to book in advance?",
+      "a": "Yes, please reserve your place before attending. The venue has limited space so we can keep the class comfortable and intimate."
+     },
+     {
+      "q": "Is yoga suitable for everyone?",
+      "a": "Yoga can often be adapted, but it may not be suitable for every condition or circumstance. Please complete the registration form before your first class and let Sara know about injuries, health concerns or access needs."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "journal",
+  "title": "Curiosità sullo yoga",
+  "icon": "book",
+  "help": "L'articolo breve con foto. Si può riscrivere per presentare una nuova curiosità.",
+  "fields": [
+   {
+    "key": "journal_eyebrow",
+    "type": "text",
+    "label": "Scritta piccola sopra il titolo della sezione",
+    "default": "YOGA CURIOSITIES"
+   },
+   {
+    "key": "journal_heading",
+    "type": "title",
+    "label": "Titolo della sezione",
+    "default": "Learn to stretch\n*from the experts.*",
+    "help": "Invio = vai a capo. Per il corsivo colorato seleziona le parole e premi «Corsivo»."
+   },
+   {
+    "key": "journal_image",
+    "type": "image",
+    "label": "Foto",
+    "default": "assets/cat-stretch.jpg",
+    "help": "Viene ritagliata in formato verticale (4:5)."
+   },
+   {
+    "key": "journal_alt",
+    "type": "text",
+    "label": "Descrizione della foto",
+    "default": "A ginger cat stretching on a wooden floor, front paws reaching far forward and hips raised"
+   },
+   {
+    "key": "journal_caption",
+    "type": "text",
+    "label": "Didascalia",
+    "default": "Stretching, the feline way."
+   },
+   {
+    "key": "journal_tag",
+    "type": "text",
+    "label": "Scritta piccola sopra l'articolo",
+    "default": "FROM THE JOURNAL"
+   },
+   {
+    "key": "journal_title",
+    "type": "text",
+    "label": "Titolo dell'articolo",
+    "default": "Cat pose (Marjaryasana): what our feline friends can teach us"
+   },
+   {
+    "key": "journal_text",
+    "type": "paragraphs",
+    "label": "Testo dell'articolo",
+    "rows": 10,
+    "help": "Riga vuota tra un paragrafo e l'altro. Racchiudi tra *asterischi* le parole in corsivo.",
+    "default": "Ever watched a cat wake from a nap? Before doing anything else, it stretches — front paws reaching long, hips lifted, spine lengthening, with no rush at all. Yoga borrowed the idea long ago: *Marjaryasana*, or Cat Pose, takes its name from the Sanskrit word for cat.\n\nOn hands and knees you round the spine towards the ceiling, then lift the chest into Cow Pose (*Bitilasana*) as you breathe in. Together they make a gentle warm-up for the back and a lovely way to link movement with breath. The stretch our model is enjoying above is closer to Downward-Facing Dog — another pose inspired by animals."
+   },
+   {
+    "key": "journal_try_title",
+    "type": "text",
+    "label": "Riquadro «prova a casa»: titolo",
+    "default": "Try it at home"
+   },
+   {
+    "key": "journal_steps",
+    "type": "list",
+    "label": "Riquadro «prova a casa»: passaggi",
+    "item_label": "Passaggio",
+    "add_label": "Aggiungi un passaggio",
+    "title_key": "text",
+    "max_items": 12,
+    "fields": [
+     {
+      "key": "text",
+      "type": "textarea",
+      "label": "Testo",
+      "rows": 2
+     }
+    ],
+    "default": [
+     {
+      "text": "Come onto hands and knees, wrists under shoulders, knees under hips."
+     },
+     {
+      "text": "Breathe out: round your back, let the head hang softly."
+     },
+     {
+      "text": "Breathe in: lift the chest and tailbone, letting the belly soften."
+     },
+     {
+      "text": "Repeat for 5–8 slow breaths. Move gently and stop if anything hurts."
+     }
+    ]
+   },
+   {
+    "key": "journal_link",
+    "type": "text",
+    "label": "Link in fondo",
+    "default": "Stretch with us on Thursdays"
+   }
+  ]
+ },
+ {
+  "id": "booking",
+  "title": "Prenotazione (chiusura)",
+  "icon": "mail",
+  "help": "L'invito finale a prenotare, in fondo alla pagina.",
+  "fields": [
+   {
+    "key": "book_eyebrow",
+    "type": "text",
+    "label": "Scritta piccola sopra il titolo",
+    "default": "YOUR MAT IS WAITING"
+   },
+   {
+    "key": "book_title",
+    "type": "title",
+    "label": "Titolo",
+    "default": "Take a breath.\n*Make a little space.*",
+    "help": "Invio = vai a capo. Per il corsivo colorato seleziona le parole e premi «Corsivo»."
+   },
+   {
+    "key": "book_text",
+    "type": "text",
+    "label": "Frase sotto il titolo",
+    "default": "Come as you are. Leave a little lighter."
+   },
+   {
+    "key": "book_btn_mail",
+    "type": "text",
+    "label": "Pulsante «scrivi» (apre la posta)",
+    "default": "Message Sara to book"
+   },
+   {
+    "key": "book_btn_form",
+    "type": "text",
+    "label": "Pulsante «modulo di iscrizione»",
+    "default": "Complete registration form"
+   },
+   {
+    "key": "book_small",
+    "type": "text",
+    "label": "Nota piccola",
+    "default": "Advance booking is essential. Please get in touch if you have any questions."
+   }
+  ]
+ }
+]

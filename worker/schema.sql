@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS hits (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  ts INTEGER NOT NULL,
+  vid TEXT NOT NULL,
+  path TEXT NOT NULL,
+  ch TEXT,
+  ref TEXT,
+  country TEXT,
+  city TEXT,
+  dev TEXT
+);
+CREATE INDEX IF NOT EXISTS hits_ts ON hits (ts);

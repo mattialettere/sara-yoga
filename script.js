@@ -50,3 +50,29 @@ if (registrationLink) {
     }
   });
 }
+
+// Contatore visite anonimo (pagine viste, visitatori unici, provenienza).
+// Funziona solo se in dashboard è stato inserito l'indirizzo del contatore.
+// Le visite dell'amministratore (collegato alla dashboard in questo browser) non vengono contate.
+(function () {
+  try {
+    var meta = document.querySelector('meta[name="stats-endpoint"]');
+    var endpoint = meta ? meta.getAttribute('content') : '';
+    if (!endpoint) return;
+    if (localStorage.getItem('ss_nc') === '1') return;
+    var vid = localStorage.getItem('ss_vid');
+    if (!vid || !/^[a-f0-9]{24}$/.test(vid)) {
+      var a = new Uint8Array(12);
+      (window.crypto || window.msCrypto).getRandomValues(a);
+      vid = Array.prototype.map.call(a, function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
+      localStorage.setItem('ss_vid', vid);
+    }
+    var base = new URL('.', document.baseURI).pathname;
+    var path = '/' + location.pathname.slice(base.length).replace(/index\.html$/, '');
+    var q = new URLSearchParams(location.search);
+    var body = JSON.stringify({ v: vid, p: path, r: document.referrer || '', u: q.get('utm_source') || '' });
+    var url = endpoint + '/hit';
+    if (navigator.sendBeacon) navigator.sendBeacon(url, new Blob([body], { type: 'text/plain' }));
+    else fetch(url, { method: 'POST', body: body, keepalive: true, headers: { 'Content-Type': 'text/plain' } });
+  } catch (e) { /* il sito funziona anche senza contatore */ }
+})();

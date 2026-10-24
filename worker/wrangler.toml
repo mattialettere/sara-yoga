@@ -1,0 +1,14 @@
+name = "sara-yoga-stats"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# Indirizzo del sito su GitHub Pages SENZA percorso (es. https://nomeutente.github.io).
+# Più indirizzi separati da virgola, ad esempio anche il dominio personalizzato.
+[vars]
+ALLOWED_ORIGINS = "https://NOMEUTENTE.github.io"
+
+# Dopo "wrangler d1 create sara-yoga-stats" copia qui l'id mostrato nel terminale.
+[[d1_databases]]
+binding = "DB"
+database_name = "sara-yoga-stats"
+database_id = "INSERISCI-QUI-L-ID-DEL-DATABASE"
