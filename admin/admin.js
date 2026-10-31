@@ -459,8 +459,8 @@ function renderStats(main) {
     }))));
   if (S.isDefault) inner.appendChild(defaultBanner());
   var todo = [];
-  if (!S.content.contact_email) todo.push(['Manca l\'email per le prenotazioni: senza, il pulsante «Scrivi a Sara» non funziona.', 'settings']);
-  if (!S.content.registration_url) todo.push(['Manca il link al modulo di iscrizione.', 'settings']);
+  if (!S.content.contact_url) todo.push(['Manca l\'indirizzo del modulo di contatto: finché è vuoto, il pulsante «Scrivi a Sara» apre solo la posta.', 'settings']);
+  if (!S.content.contact_email) todo.push(['Manca l\'email di riserva (info@sarashanti.com), usata se il modulo non è disponibile.', 'settings']);
   if (todo.length) inner.appendChild(el('div', { class: 'card', style: 'margin-bottom:14px' }, el('h2', { text: 'Da completare prima di pubblicare' }),
     el('ul', { class: 'todo' }, todo.map(function (t) { return el('li', null, t[0], el('button', { class: 'btn small', text: 'Completa', onclick: function () { go(t[1]); } })); }))));
   var body = el('div', { id: 'statsbody' }, el('p', { class: 'help', text: 'Caricamento delle statistiche…' }));

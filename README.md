@@ -34,7 +34,7 @@ GitHub Pages non può contare le visite da solo: serve un piccolo servizio gratu
 Statistiche disponibili: visitatori unici, pagine viste, andamento giornaliero, provenienza (Google, Instagram, accesso diretto…), paesi e città, pagine, dispositivi. Le visite fatte dal browser in cui sei collegata alla dashboard non vengono contate.
 
 ## Prima di pubblicare
-1. *Contatti e informazioni*: email per le prenotazioni, link al modulo di iscrizione e «Indirizzo del sito» (dominio finale).
+1. *Contatti e informazioni*: email di riserva, indirizzo del modulo di contatto (vedi `contact/README.md`) e «Indirizzo del sito» (dominio finale).
 2. Cambia email e password di accesso.
 3. Conferma date, foto e permessi d'uso delle immagini.
 4. **Privacy:** il contatore usa un identificativo anonimo salvato nel browser del visitatore: aggiungi un'informativa privacy (e, se richiesto, un banner cookie).
@@ -46,6 +46,7 @@ Statistiche disponibili: visitatori unici, pagine viste, andamento giornaliero, 
 - `content.json` — testi e foto salvati dalla dashboard
 - `admin/` — dashboard (`index.html`, `store.js`, `admin.js`, `render.js`, `schema.json`, `auth.json`)
 - `worker/` — contatore visite (Cloudflare Worker + database D1)
+- `contact/` — modulo di contatto (Cloudflare Worker + Resend) e guida a Email Routing, Resend e Gmail
 - `tools/build.mjs` — rigenera `index.html` da `content.json` (`node tools/build.mjs`)
 - `assets/uploads/` — foto caricate dalla dashboard
 - `.nojekyll` — dice a GitHub Pages di pubblicare i file così come sono

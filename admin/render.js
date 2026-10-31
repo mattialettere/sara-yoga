@@ -155,6 +155,7 @@ export function renderPage(schema, saved, opts = {}) {
   <meta name="description" content="${h(c.site_description)}">
   <meta name="robots" content="index,follow">
   <meta name="stats-endpoint" content="${h(c.stats_url.replace(/\/+$/, ''))}">
+  <meta name="contact-endpoint" content="${h(c.contact_url.replace(/\/+$/, ''))}">
   <link rel="canonical" href="${h(siteUrl)}">
   <title>${h(c.site_title)}</title>
   <meta property="og:type" content="website">
@@ -341,8 +342,7 @@ ${themes}
         <h2>${mk(c.book_title)}</h2>
         <p>${mk(c.book_text)}</p>
         <div class="booking-actions">
-          <a class="button button-light" href="${mailto}${c.contact_email !== '' ? '?subject=Yoga%20class%20booking' : ''}">${h(c.book_btn_mail)} <span>↗</span></a>
-          <a class="button button-translucent" href="${c.registration_url !== '' ? h(c.registration_url) : '#'}"${c.registration_url !== '' ? ' target="_blank" rel="noopener noreferrer"' : ''} id="registration-link">${h(c.book_btn_form)} <span>↗</span></a>
+          <a class="button button-light" data-contact href="${mailto}${c.contact_email !== '' ? '?subject=Yoga%20class%20booking' : ''}">${h(c.book_btn_mail)} <span>↗</span></a>
         </div>
         <p class="booking-small">${h(c.book_small)}</p>
       </div>
@@ -355,7 +355,7 @@ ${themes}
       <p>${h(c.footer_tagline)}</p>
       <a class="back-top" href="#top">${h(c.footer_back)} ↑</a>
     </div>
-    <div class="container footer-bottom"><span>© <span id="year">${year}</span> ${h(c.footer_name)}</span><span>${h(c.footer_made)}</span><a href="${mailto}">${h(c.footer_contact)}</a><a class="admin-link" href="admin/">Area amministratore</a></div>
+    <div class="container footer-bottom"><span>© <span id="year">${year}</span> ${h(c.footer_name)}</span><span>${h(c.footer_made)}</span><a data-contact href="${mailto}">${h(c.footer_contact)}</a><a class="admin-link" href="admin/">Area amministratore</a></div>
   </footer>
   <dialog id="lightbox" class="lightbox" aria-label="Enlarged photo">
     <figure>
@@ -363,6 +363,26 @@ ${themes}
       <figcaption></figcaption>
     </figure>
     <button type="button" class="lightbox-close" aria-label="Close photo">×</button>
+  </dialog>
+  <dialog id="contact-dialog" class="contact-dialog" aria-labelledby="contact-title" data-fallback="${h(c.contact_email)}">
+    <div class="contact-card">
+      <button type="button" class="contact-close" aria-label="Close form">×</button>
+      <p class="eyebrow">GET IN TOUCH</p>
+      <h2 id="contact-title">Message <em>Sara</em></h2>
+      <p class="contact-intro">Tell Sara which class you would like to join and ask any questions you have. She will reply by email.</p>
+      <form id="contact-form" novalidate>
+        <div class="field-row">
+          <label>First name<input type="text" name="first" required maxlength="60" autocomplete="given-name"></label>
+          <label>Last name<input type="text" name="last" required maxlength="60" autocomplete="family-name"></label>
+        </div>
+        <label>Email<input type="email" name="email" required maxlength="120" autocomplete="email"></label>
+        <label>Message<textarea name="message" required rows="5" maxlength="3000"></textarea></label>
+        <div class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <button class="button button-dark contact-submit" type="submit">Send message <span>↗</span></button>
+        <p class="contact-status" role="status" aria-live="polite"></p>
+        <p class="contact-privacy">Your details are used only to reply to your message.</p>
+      </form>
+    </div>
   </dialog>
   <script src="script.js"></script>
 </body>

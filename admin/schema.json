@@ -10,14 +10,7 @@
     "type": "email",
     "label": "Email per le prenotazioni",
     "default": "",
-    "help": "I pulsanti «Scrivi a Sara» apriranno la posta con questo indirizzo. Importante: inseriscila prima di pubblicare il sito."
-   },
-   {
-    "key": "registration_url",
-    "type": "url",
-    "label": "Link al modulo di iscrizione",
-    "default": "",
-    "help": "Indirizzo completo, ad esempio https://forms.gle/… Finché è vuoto, chi clicca vede un avviso."
+    "help": "Indirizzo mostrato come alternativa se il modulo di contatto non funziona (apre la posta del visitatore). Di solito: info@sarashanti.com."
    },
    {
     "key": "divider_site",
@@ -28,7 +21,7 @@
     "key": "site_url",
     "type": "url",
     "label": "Indirizzo del sito",
-    "default": "https://www.sarashanti.co.uk/",
+    "default": "https://sarashanti.com/",
     "help": "L'indirizzo pubblico completo (con https://). Serve a Google e alle anteprime sui social."
    },
    {
@@ -37,6 +30,13 @@
     "label": "Indirizzo del contatore visite",
     "default": "",
     "help": "Compare dopo aver attivato il contatore (vedi «Collegamenti»). Finché è vuoto le visite non vengono contate."
+   },
+   {
+    "key": "contact_url",
+    "type": "url",
+    "label": "Indirizzo del modulo di contatto",
+    "default": "",
+    "help": "L'indirizzo del Worker «contact» su Cloudflare (vedi contact/README.md), ad esempio https://sara-contact.xxx.workers.dev. Finché è vuoto, il pulsante «Scrivi a Sara» apre la posta del visitatore."
    },
    {
     "key": "divider_venue",
@@ -1016,7 +1016,7 @@
      },
      {
       "q": "Is yoga suitable for everyone?",
-      "a": "Yoga can often be adapted, but it may not be suitable for every condition or circumstance. Please complete the registration form before your first class and let Sara know about injuries, health concerns or access needs."
+      "a": "Yoga can often be adapted, but it may not be suitable for every condition or circumstance. Please let Sara know about any injuries, health concerns or access needs when you book your first class."
      }
     ]
    }
@@ -1153,14 +1153,8 @@
    {
     "key": "book_btn_mail",
     "type": "text",
-    "label": "Pulsante «scrivi» (apre la posta)",
+    "label": "Pulsante «scrivi» (apre il modulo di contatto)",
     "default": "Message Sara to book"
-   },
-   {
-    "key": "book_btn_form",
-    "type": "text",
-    "label": "Pulsante «modulo di iscrizione»",
-    "default": "Complete registration form"
    },
    {
     "key": "book_small",

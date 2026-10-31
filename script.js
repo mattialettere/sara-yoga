@@ -39,17 +39,68 @@ if (lightbox && typeof lightbox.showModal === 'function') {
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-// Intentionally keep the registration form link from navigating to an empty page.
-// Replace this placeholder in index.html with the real form URL before publishing.
-const registrationLink = document.querySelector('#registration-link');
-if (registrationLink) {
-  registrationLink.addEventListener('click', event => {
-    if (registrationLink.getAttribute('href') === '#') {
+// Modulo di contatto: «Message Sara to book» e «Get in touch» aprono una finestra con il modulo.
+// Se l'indirizzo del modulo non è stato impostato in dashboard (o il browser è molto vecchio),
+// i link funzionano come prima e aprono la posta del visitatore (mailto).
+(function () {
+  var dialog = document.querySelector('#contact-dialog');
+  var form = document.querySelector('#contact-form');
+  var meta = document.querySelector('meta[name="contact-endpoint"]');
+  var endpoint = meta ? meta.getAttribute('content') : '';
+  if (!dialog || !form || !endpoint || typeof dialog.showModal !== 'function') return;
+
+  var status = form.querySelector('.contact-status');
+  var submit = form.querySelector('.contact-submit');
+  var fallback = dialog.getAttribute('data-fallback') || '';
+  var openedAt = 0;
+
+  function setStatus(text, kind) {
+    status.textContent = text;
+    status.className = 'contact-status' + (kind ? ' is-' + kind : '');
+  }
+
+  document.querySelectorAll('[data-contact]').forEach(function (link) {
+    link.addEventListener('click', function (event) {
       event.preventDefault();
-      alert('The registration form link has not been added yet. Please message Sara to receive the form.');
-    }
+      setStatus('', '');
+      openedAt = Date.now();
+      dialog.showModal();
+    });
   });
-}
+
+  dialog.addEventListener('click', function (event) {
+    if (event.target === dialog || event.target.closest('.contact-close')) dialog.close();
+  });
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var data = new FormData(form);
+    var first = String(data.get('first') || '').trim();
+    var last = String(data.get('last') || '').trim();
+    var email = String(data.get('email') || '').trim();
+    var message = String(data.get('message') || '').trim();
+    if (!first || !last || !email || !message) { setStatus('Please fill in every field.', 'error'); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setStatus('Please enter a valid email address.', 'error'); return; }
+
+    submit.disabled = true;
+    setStatus('Sending…', '');
+    fetch(endpoint + '/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        first: first, last: last, email: email, message: message,
+        website: String(data.get('website') || ''),
+        t: openedAt ? Date.now() - openedAt : 0
+      })
+    }).then(function (res) {
+      if (!res.ok) throw new Error('http ' + res.status);
+      form.reset();
+      setStatus('Thank you! Your message is on its way. Sara will reply by email soon.', 'ok');
+    }).catch(function () {
+      setStatus('Sorry, something went wrong.' + (fallback ? ' Please try again or write to ' + fallback + '.' : ' Please try again in a moment.'), 'error');
+    }).finally(function () { submit.disabled = false; });
+  });
+})();
 
 // Contatore visite anonimo (pagine viste, visitatori unici, provenienza).
 // Funziona solo se in dashboard è stato inserito l'indirizzo del contatore.

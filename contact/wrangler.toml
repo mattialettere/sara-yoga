@@ -1,0 +1,20 @@
+name = "sara-contact"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# Opzionale: indirizzo più bello, es. https://contact.sarashanti.com (il dominio è già su Cloudflare).
+# Togli il «#» davanti alle 3 righe e rilancia "npx wrangler deploy".
+# [[routes]]
+# pattern = "contact.sarashanti.com"
+# custom_domain = true
+
+[vars]
+# Siti autorizzati a usare il modulo (senza percorso, separati da virgola).
+# Aggiungi anche https://NOMEUTENTE.github.io se vuoi provarlo prima del dominio.
+ALLOWED_ORIGINS = "https://sarashanti.com,https://www.sarashanti.com"
+# Dove arriva il messaggio: info@sarashanti.com viene inoltrato a Gmail da Cloudflare Email Routing.
+TO_EMAIL = "info@sarashanti.com"
+# Mittente: deve essere sul dominio verificato in Resend.
+FROM_EMAIL = "Sara Shanti Yoga <noreply@sarashanti.com>"
+
+# La chiave di Resend NON va scritta qui: si salva con  npx wrangler secret put RESEND_API_KEY
