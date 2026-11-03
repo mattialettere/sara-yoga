@@ -8,6 +8,7 @@
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://sarashanti.com/terms.html">
   <title>Website & Class Terms | Sara Shanti Yoga</title>
+  <meta name="stats-endpoint" content="https://sara-yoga-stats.sarashanti.workers.dev">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -24,7 +25,7 @@
     <p class="legal-updated">Last updated: 3 November 2026</p>
     <p>These terms apply to your use of sarashanti.com and to enquiries and bookings for classes advertised by Sara Shanti Yoga. By using the website, you agree to use it lawfully. A class booking is subject to confirmation by Sara.</p>
     <h2>1. Who provides the classes?</h2>
-    <p>Classes are offered by Sara Lasca, a sole trader operating as Sara Shanti Yoga (“Sara”). For enquiries, bookings or questions about these terms, email <a href="mailto:info@sarashanti.com">info@sarashanti.com</a>.</p>
+    <p>Classes are offered by Sara Lasca, an individual operating under the name Sara Shanti Yoga (“Sara”). For enquiries, bookings or questions about these terms, email <a href="mailto:info@sarashanti.com">info@sarashanti.com</a>.</p>
     <h2>2. Website information</h2>
     <p>Information about class times, venues, prices and availability is provided in good faith and may change. Please check the details with Sara before travelling to a class. The website is provided for general information and may occasionally be unavailable or contain errors.</p>
     <h2>3. Classes, bookings and fees</h2>
@@ -48,6 +49,24 @@
   <footer class="site-footer"><div class="container footer-main">
     <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">ॐ</span><span>Sara <em>Shanti</em><small>YOGA · SOUTHAMPTON</small></span></a>
     <p>A friendly space to breathe, move and belong.</p><a class="back-top" href="index.html">Back to home ↑</a>
-  </div><div class="container footer-bottom"><span>© <span id="year">2026</span> Sara Shanti Yoga</span><a href="privacy.html">Privacy</a><a href="cookies.html">Cookies</a><a href="terms.html">Terms</a><a href="index.html#book">Get in touch</a><a href="index.html" class="cookie-settings-link">Cookie choices are available on the home page</a></div></footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </div><div class="container footer-bottom"><span>© <span id="year">2026</span> Sara Shanti Yoga</span><a href="privacy.html">Privacy</a><a href="cookies.html">Cookies</a><a href="terms.html">Terms</a><a href="index.html#book">Get in touch</a><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></div></footer>
+
+  <section id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-labelledby="cookie-title" hidden>
+    <div class="cookie-banner-copy"><p class="eyebrow">YOUR PRIVACY MATTERS</p><h2 id="cookie-title">A little choice about cookies</h2>
+      <p>We use essential browser storage to remember your choice. With your permission, anonymous analytics help us understand which pages are useful. You can accept, reject or customise optional analytics at any time.</p>
+      <a href="cookies.html">Read our Cookie Policy</a></div>
+    <div class="cookie-banner-actions"><button type="button" class="button button-dark" id="cookie-accept">Accept all</button>
+      <button type="button" class="button button-outline" id="cookie-reject">Reject non-essential</button>
+      <button type="button" class="cookie-manage" id="cookie-manage">Manage preferences</button></div>
+  </section>
+  <dialog id="cookie-dialog" class="cookie-dialog" aria-labelledby="cookie-dialog-title"><div class="cookie-dialog-card">
+    <button type="button" class="contact-close" id="cookie-close" aria-label="Close cookie preferences">×</button>
+    <p class="eyebrow">PRIVACY PREFERENCES</p><h2 id="cookie-dialog-title">Your cookie <em>choices</em></h2>
+    <p class="contact-intro">You can change these choices whenever you like using “Cookie settings” in the footer.</p>
+    <div class="cookie-option"><div><strong>Strictly necessary storage</strong><p>Remembers your privacy choice. It is always active and does not track you.</p></div><span class="cookie-always">Always on</span></div>
+    <label class="cookie-option cookie-toggle"><span><strong>Analytics</strong><small>Allows an anonymous visitor identifier and page-view statistics. No analytics are sent unless you switch this on.</small></span><input type="checkbox" id="cookie-analytics"></label>
+    <div class="cookie-dialog-actions"><button type="button" class="button button-dark" id="cookie-save">Save my choices</button><button type="button" class="button button-outline" id="cookie-dialog-reject">Reject non-essential</button></div>
+    <a href="privacy.html">Privacy Notice</a> · <a href="cookies.html">Cookie Policy</a>
+  </div></dialog>
+  <script src="script.js"></script>
 </body></html>
