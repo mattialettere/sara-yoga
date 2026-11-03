@@ -17,9 +17,6 @@
   <meta property="og:image" content="https://sarashanti.com/assets/yoga-beach.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthClub","name":"Sara Shanti Yoga","url":"https://sarashanti.com/","description":"Join Sara Shanti for welcoming Sivananda Hatha Yoga classes in Southampton. Enjoy a balanced 75-minute practice with breathing, postures and deep relaxation. Beginners are welcome.","image":"https://sarashanti.com/assets/yoga-beach.jpg","address":{"@type":"PostalAddress","streetAddress":"St Denys Social Club, 100 St Denys Road","addressLocality":"Southampton","postalCode":"SO17 2FP","addressCountry":"GB"},"event":{"@type":"Event","name":"Weekly Sivananda Hatha Yoga Class","eventSchedule":{"@type":"Schedule","byDay":"https://schema.org/Thursday","startTime":"20:00","endTime":"21:15"},"location":{"@type":"Place","name":"St Denys Social Club","address":{"@type":"PostalAddress","streetAddress":"100 St Denys Road","addressLocality":"Southampton","postalCode":"SO17 2FP","addressCountry":"GB"}},"offers":[{"@type":"Offer","name":"Drop-in","price":"10","priceCurrency":"GBP"},{"@type":"Offer","name":"Class bundle","price":"8","priceCurrency":"GBP"}]},"priceRange":"£8–£10 per class"}</script>
 </head>
@@ -327,7 +324,7 @@
       <p>A friendly space to breathe, move and belong.</p>
       <a class="back-top" href="#top">Back to top ↑</a>
     </div>
-    <div class="container footer-bottom"><span>© <span id="year">2026</span> Sara Shanti Yoga</span><span>Made with care in Southampton, UK</span><a data-contact href="mailto:info@sarashanti.com">Get in touch</a><a class="admin-link" href="admin/">Area amministratore</a></div>
+    <div class="container footer-bottom"><span>© <span id="year">2026</span> Sara Shanti Yoga</span><span>Made with care in Southampton, UK</span><a data-contact href="mailto:info@sarashanti.com">Get in touch</a><a href="privacy.html">Privacy</a><a href="cookies.html">Cookies</a><a href="terms.html">Terms</a><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button><a class="admin-link" href="admin/">Area amministratore</a></div>
   </footer>
   <dialog id="lightbox" class="lightbox" aria-label="Enlarged photo">
     <figure>
@@ -360,6 +357,41 @@
         <p class="contact-status" role="status" aria-live="polite"></p>
         <p class="contact-privacy">Your details are used only to reply to your message.</p>
       </form>
+    </div>
+  </dialog>
+
+  <section id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-labelledby="cookie-title" hidden>
+    <div class="cookie-banner-copy">
+      <p class="eyebrow">YOUR PRIVACY MATTERS</p>
+      <h2 id="cookie-title">A little choice about cookies</h2>
+      <p>We use essential browser storage to remember your choice. With your permission, anonymous analytics help us understand which pages are useful. You can accept, reject or customise optional analytics at any time.</p>
+      <a href="cookies.html">Read our Cookie Policy</a>
+    </div>
+    <div class="cookie-banner-actions">
+      <button type="button" class="button button-dark" id="cookie-accept">Accept all</button>
+      <button type="button" class="button button-outline" id="cookie-reject">Reject non-essential</button>
+      <button type="button" class="cookie-manage" id="cookie-manage">Manage preferences</button>
+    </div>
+  </section>
+  <dialog id="cookie-dialog" class="cookie-dialog" aria-labelledby="cookie-dialog-title">
+    <div class="cookie-dialog-card">
+      <button type="button" class="contact-close" id="cookie-close" aria-label="Close cookie preferences">×</button>
+      <p class="eyebrow">PRIVACY PREFERENCES</p>
+      <h2 id="cookie-dialog-title">Your cookie <em>choices</em></h2>
+      <p class="contact-intro">You can change these choices whenever you like using “Cookie settings” in the footer.</p>
+      <div class="cookie-option">
+        <div><strong>Strictly necessary storage</strong><p>Remembers your privacy choice. It is always active and does not track you.</p></div>
+        <span class="cookie-always">Always on</span>
+      </div>
+      <label class="cookie-option cookie-toggle">
+        <span><strong>Analytics</strong><small>Allows an anonymous visitor identifier and page-view statistics. No analytics are sent unless you switch this on.</small></span>
+        <input type="checkbox" id="cookie-analytics">
+      </label>
+      <div class="cookie-dialog-actions">
+        <button type="button" class="button button-dark" id="cookie-save">Save my choices</button>
+        <button type="button" class="button button-outline" id="cookie-dialog-reject">Reject non-essential</button>
+      </div>
+      <a href="privacy.html">Privacy Notice</a> · <a href="cookies.html">Cookie Policy</a>
     </div>
   </dialog>
   <script src="script.js"></script>
