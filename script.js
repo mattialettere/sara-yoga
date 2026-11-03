@@ -47,11 +47,12 @@ document.querySelector('#year').textContent = new Date().getFullYear();
   var form = document.querySelector('#contact-form');
   var meta = document.querySelector('meta[name="contact-endpoint"]');
   var endpoint = meta ? meta.getAttribute('content') : '';
-  if (!dialog || !form || !endpoint || typeof dialog.showModal !== 'function') return;
+  if (!dialog || !form || typeof dialog.showModal !== 'function') return;
 
   var status = form.querySelector('.contact-status');
   var submit = form.querySelector('.contact-submit');
   var fallback = dialog.getAttribute('data-fallback') || '';
+  var packageField = form.querySelector('[name="package"]');
   var openedAt = 0;
 
   function setStatus(text, kind) {
@@ -63,6 +64,11 @@ document.querySelector('#year').textContent = new Date().getFullYear();
     link.addEventListener('click', function (event) {
       event.preventDefault();
       setStatus('', '');
+      if (packageField) {
+        var requestedPackage = link.getAttribute('data-package') || 'Informations';
+        packageField.value = requestedPackage;
+        if (!packageField.value) packageField.value = 'Informations';
+      }
       openedAt = Date.now();
       dialog.showModal();
     });
@@ -78,9 +84,18 @@ document.querySelector('#year').textContent = new Date().getFullYear();
     var first = String(data.get('first') || '').trim();
     var last = String(data.get('last') || '').trim();
     var email = String(data.get('email') || '').trim();
+    var selectedPackage = String(data.get('package') || 'Informations').trim();
     var message = String(data.get('message') || '').trim();
-    if (!first || !last || !email || !message) { setStatus('Please fill in every field.', 'error'); return; }
+    if (!first || !last || !email || !selectedPackage || !message) { setStatus('Please fill in every field.', 'error'); return; }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setStatus('Please enter a valid email address.', 'error'); return; }
+
+    if (!endpoint) {
+      var subject = encodeURIComponent('Yoga enquiry (' + selectedPackage + ') from ' + first + ' ' + last);
+      var body = encodeURIComponent('Name: ' + first + ' ' + last + '\\nEmail: ' + email + '\\nInterested in: ' + selectedPackage + '\\n\\n' + message);
+      window.location.href = 'mailto:' + (fallback || 'info@sarashanti.com') + '?subject=' + subject + '&body=' + body;
+      setStatus('Your email app is opening with your message. Please send the email to complete your enquiry.', 'ok');
+      return;
+    }
 
     submit.disabled = true;
     setStatus('Sending…', '');
@@ -88,7 +103,7 @@ document.querySelector('#year').textContent = new Date().getFullYear();
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        first: first, last: last, email: email, message: message,
+        first: first, last: last, email: email, package: selectedPackage, message: message,
         website: String(data.get('website') || ''),
         t: openedAt ? Date.now() - openedAt : 0
       })

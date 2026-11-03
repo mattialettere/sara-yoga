@@ -283,9 +283,9 @@ blockquote { font: 500 clamp(28px, 3.6vw, 43px)/1.35 var(--serif); margin: 20px 
 .contact-intro { color: var(--muted); font-size: 13px; margin-bottom: 22px; }
 .contact-card form { display: grid; gap: 14px; }
 .contact-card label { display: grid; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: .4px; }
-.contact-card input, .contact-card textarea { font: 400 14px/1.5 var(--sans); color: var(--ink); background: white; border: 1px solid #c9d3c6; border-radius: 2px; padding: 12px 14px; width: 100%; }
+.contact-card input, .contact-card select, .contact-card textarea { font: 400 14px/1.5 var(--sans); color: var(--ink); background: white; border: 1px solid #c9d3c6; border-radius: 2px; padding: 12px 14px; width: 100%; }
 .contact-card textarea { resize: vertical; min-height: 120px; }
-.contact-card input:focus, .contact-card textarea:focus { outline: 2px solid var(--sage-dark); outline-offset: 1px; }
+.contact-card input:focus, .contact-card select:focus, .contact-card textarea:focus { outline: 2px solid var(--sage-dark); outline-offset: 1px; }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .contact-submit { border: 0; cursor: pointer; justify-self: start; }

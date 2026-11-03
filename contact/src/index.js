@@ -35,25 +35,28 @@ export function validate(b) {
   const first = oneLine(b.first, 60);
   const last = oneLine(b.last, 60);
   const email = oneLine(b.email, 120);
+  const selectedPackage = oneLine(b.package, 80);
+  const allowedPackages = ['Drop-in', 'Class bundle', 'Informations'];
   const message = String(b.message ?? '').replace(/\r\n/g, '\n').replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, '').trim().slice(0, 3000);
   if (!first || !last) return { ok: false, error: 'Nome e cognome obbligatori.' };
   if (!EMAIL_RE.test(email)) return { ok: false, error: 'Email non valida.' };
+  if (!allowedPackages.includes(selectedPackage)) return { ok: false, error: 'Please select a valid option.' };
   if (message.length < 2) return { ok: false, error: 'Messaggio mancante.' };
-  return { ok: true, data: { first, last, email, message } };
+  return { ok: true, data: { first, last, email, package: selectedPackage, message } };
 }
 
-export function buildEmail({ first, last, email, message }, env) {
+export function buildEmail({ first, last, email, package: selectedPackage, message }, env) {
   const name = `${first} ${last}`;
-  const text = `New message from the website\n\nName: ${name}\nEmail: ${email}\n\n${message}\n`;
+  const text = `New message from the website\n\nName: ${name}\nEmail: ${email}\nInterested in: ${selectedPackage}\n\n${message}\n`;
   const html = `<p><strong>New message from the website</strong></p>
-<p><strong>Name:</strong> ${esc(name)}<br><strong>Email:</strong> <a href="mailto:${esc(email)}">${esc(email)}</a></p>
+<p><strong>Name:</strong> ${esc(name)}<br><strong>Email:</strong> <a href="mailto:${esc(email)}">${esc(email)}</a><br><strong>Interested in:</strong> ${esc(selectedPackage)}</p>
 <p style="white-space:pre-wrap">${esc(message)}</p>
 <p style="color:#888;font-size:12px">Press Reply to answer ${esc(name)} directly.</p>`;
   return {
     from: env.FROM_EMAIL,
     to: [env.TO_EMAIL],
     reply_to: email,
-    subject: `Website message from ${name}`,
+    subject: `Website enquiry (${selectedPackage}) from ${name}`,
     text,
     html
   };

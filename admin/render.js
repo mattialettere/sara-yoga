@@ -135,7 +135,7 @@ export function renderPage(schema, saved, opts = {}) {
             <p class="eyebrow">${h(p.eyebrow)}</p><h3>${h(p.title)}</h3>
             <div class="price"><span>${h(p.currency)}</span>${h(p.price)}<small> ${h(p.unit)}</small></div>
             <p>${mk(p.text)}</p>
-            <a class="button ${feat ? 'button-dark' : 'button-outline'}" href="#book">${h(p.button)} <span>↗</span></a>
+            <a class="button ${feat ? 'button-dark' : 'button-outline'}" data-contact data-package="${h(p.title)}" href="#book">${h(p.button)} <span>↗</span></a>
           </article>`;
   }).join('');
 
@@ -376,6 +376,12 @@ ${themes}
           <label>Last name<input type="text" name="last" required maxlength="60" autocomplete="family-name"></label>
         </div>
         <label>Email<input type="email" name="email" required maxlength="120" autocomplete="email"></label>
+        <label>I'm interested in
+          <select name="package" required>
+            ${c.price_cards.map(p => `<option value="${h(p.title)}">${h(p.title)}</option>`).join('')}
+            <option value="Informations">Informations</option>
+          </select>
+        </label>
         <label>Message<textarea name="message" required rows="5" maxlength="3000"></textarea></label>
         <div class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
         <button class="button button-dark contact-submit" type="submit">Send message <span>↗</span></button>

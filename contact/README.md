@@ -90,3 +90,15 @@ Per mail automatiche (ad esempio una conferma al visitatore) si riusa lo stesso 
 - **Errore di origine (403) nel browser**: l'indirizzo del sito non è in `ALLOWED_ORIGINS` (controlla `www` sì/no) → modifica e rilancia `npx wrangler deploy`.
 - **La mail parte ma non arriva in Gmail**: guarda Spam; controlla in Cloudflare che Email Routing sia *Enabled* e l'indirizzo `info` attivo.
 - **Anti-spam**: un campo nascosto e un tempo minimo di compilazione scartano la maggior parte dei bot; se un giorno arrivano molti messaggi indesiderati, aggiungi Turnstile o una regola di *rate limiting* su Cloudflare.
+
+
+## Importante — attivazione effettiva dell'invio automatico
+
+Il modulo grafico è già presente nel sito. Per far arrivare gli invii direttamente a `info@sarashanti.com` senza dipendere dal programma di posta del visitatore, è necessario pubblicare il Worker (Parte 3) e configurare il suo URL nella dashboard:
+
+1. Dopo `npx wrangler deploy`, copia l'URL `https://...workers.dev` restituito da Cloudflare.
+2. Apri `admin/` sul sito, entra in **Contatti e informazioni** e incolla l'URL in **Indirizzo del modulo di contatto** (senza `/send`).
+3. Verifica che **Email per le prenotazioni** sia `info@sarashanti.com`, quindi pubblica le modifiche.
+4. Fai un invio di prova dal sito e verifica che arrivi a `info@sarashanti.com`.
+
+Finché il Worker non è configurato, il modulo si apre comunque e prepara una mail indirizzata a `info@sarashanti.com` nell'applicazione di posta del visitatore. L'invio automatico dal sito si attiva appena viene configurato l'URL del Worker.
