@@ -41,6 +41,12 @@
           "@type": "City",
           "name": "Southampton"
         },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/Thursday",
+          "opens": "20:00",
+          "closes": "21:15"
+        },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Yoga class options",
@@ -68,51 +74,6 @@
           ]
         }
       },
-      {
-        "@type": "Event",
-        "@id": "https://sarashanti.com/#weekly-class",
-        "name": "Weekly Sivananda Hatha Yoga class in Southampton",
-        "description": "A welcoming 75-minute Sivananda Hatha Yoga class. Beginners and all levels are welcome; please contact Sara to confirm availability before attending.",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "eventSchedule": {
-          "@type": "Schedule",
-          "repeatFrequency": "P1W",
-          "byDay": "https://schema.org/Thursday",
-          "startTime": "20:00",
-          "endTime": "21:15",
-          "scheduleTimezone": "Europe/London"
-        },
-        "location": {
-          "@type": "Place",
-          "name": "St Denys Social Club",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "100 St Denys Road",
-            "addressLocality": "Southampton",
-            "postalCode": "SO17 2FP",
-            "addressCountry": "GB"
-          }
-        },
-        "organizer": {
-          "@id": "https://sarashanti.com/#business"
-        },
-        "offers": [
-          {
-            "@type": "Offer",
-            "name": "Drop-in",
-            "price": "10",
-            "priceCurrency": "GBP",
-            "url": "https://sarashanti.com/#pricing"
-          },
-          {
-            "@type": "Offer",
-            "name": "Class bundle rate per class",
-            "price": "8",
-            "priceCurrency": "GBP",
-            "url": "https://sarashanti.com/#pricing"
-          }
-        ]
-      }
     ]
   }
   </script>
