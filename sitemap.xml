@@ -8,4 +8,6 @@
   <url><loc>https://sarashanti.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://sarashanti.com/cookies.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://sarashanti.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://sarashanti.com/journal/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sarashanti.com/journal/cat-pose-marjaryasana.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
 </urlset>
