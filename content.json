@@ -1,3 +1,277 @@
 {
-  "contact_email": "info@sarashanti.com"
+  "contact_email": "info@sarashanti.com",
+  "site_url": "https://sarashanti.com/",
+  "stats_url": "",
+  "contact_url": "https://sara-contact.sarashanti.workers.dev",
+  "venue_name": "St Denys Social Club",
+  "venue_street": "100 St Denys Road",
+  "venue_city": "Southampton",
+  "venue_postcode": "SO17 2FP",
+  "site_title": "Yoga Classes in Southampton | Sara Shanti – Sivananda Hatha Yoga",
+  "site_description": "Join Sara Shanti for welcoming Sivananda Hatha Yoga classes in Southampton. Enjoy a balanced 75-minute practice with breathing, postures and deep relaxation. Beginners are welcome.",
+  "seo_day": "Thursday",
+  "seo_start": "20:00",
+  "seo_end": "21:15",
+  "brand_name": "Sara *Shanti*",
+  "brand_tag": "YOGA · SOUTHAMPTON",
+  "nav_about": "My approach",
+  "nav_classes": "Classes",
+  "nav_gallery": "Gallery",
+  "nav_pricing": "Pricing",
+  "nav_location": "Location",
+  "nav_cta": "Book a class",
+  "footer_tagline": "A friendly space to breathe, move and belong.",
+  "footer_back": "Back to top",
+  "footer_name": "Sara Shanti Yoga",
+  "footer_made": "Made with care in Southampton, UK",
+  "footer_contact": "Get in touch",
+  "hero_image": "assets/yoga-beach.jpg",
+  "hero_alt": "A small group practising yoga together on a peaceful beach",
+  "hero_eyebrow": "BREATHE · MOVE · BELONG",
+  "hero_title": "Find your calm.\n*Come as you are.*",
+  "hero_copy": "Friendly, traditional Hatha Yoga in Southampton — a little space in your week to slow down, reconnect and feel good in your body.",
+  "hero_btn": "Join a class",
+  "hero_link": "Get to know me",
+  "hero_note_title": "New to yoga?",
+  "hero_note_text": "You're very welcome here.",
+  "hero_caption": "A welcoming yoga community in Southampton",
+  "intro_label": "A PRACTICE FOR\nREAL LIFE",
+  "intro_eyebrow": "A LITTLE PAUSE IN YOUR WEEK",
+  "intro_title": "Yoga isn't about touching your toes.\n*It's about coming home to yourself.*",
+  "intro_text": "Life can be busy. Our classes offer a warm, judgement-free place to breathe a little deeper, move with intention and leave feeling more grounded. No competition, no pressure and no need to be flexible.",
+  "about_image": "assets/yoga-park.jpg",
+  "about_alt": "A group of people practising yoga outdoors in a leafy park at golden hour",
+  "about_stamp_num": "16+",
+  "about_stamp_text": "YEARS OF\nPERSONAL PRACTICE",
+  "about_eyebrow": "HELLO, I'M SARA",
+  "about_title": "So glad\n*you're here.*",
+  "about_script": "Warmly, Shanti Sara",
+  "about_text": "I've been practising yoga for over 16 years, and following my heart led me to become a certified Sivananda Hatha Yoga Teacher (Siromani).\n\nThis summer, I started teaching a small yoga class in the park. What began as a simple idea grew into a lovely group of 8–10 wonderful souls. Watching our friendly community grow week by week has been an absolute joy.\n\nAs the seasons change, we're bringing our practice indoors to a cosy studio space. Whether you've joined me before or are stepping onto a yoga mat for the very first time, there's a place for you here.",
+  "about_link": "Discover our classes",
+  "practice_eyebrow": "THE CLASS EXPERIENCE",
+  "practice_title": "Traditional practice.\n*Space to be yourself.*",
+  "practice_text": "Each 75-minute class follows the balanced principles of classical Sivananda Hatha Yoga, with room to listen to your own body and find your own pace.",
+  "practice_cards": [
+    {
+      "title": "Breathe",
+      "text": "Pranayama breathing practices to settle the mind, bring awareness to the present and create a sense of calm."
+    },
+    {
+      "title": "Move & strengthen",
+      "text": "Accessible asanas (yoga postures) to gently build strength, mobility, balance and body awareness."
+    },
+    {
+      "title": "Rest deeply",
+      "text": "A restorative final relaxation to let go of tension and leave feeling centred, refreshed and recharged."
+    }
+  ],
+  "practice_pills": [
+    {
+      "text": "75 minutes"
+    },
+    {
+      "text": "All levels welcome"
+    },
+    {
+      "text": "No pressure, ever"
+    }
+  ],
+  "gallery_eyebrow": "OUR CLASSES & POSTURES",
+  "gallery_title": "In the park, on the mat,\n*and in stillness.*",
+  "gallery_text": "A little glimpse of the practice — from sunlit sessions in the park to gentle stretching and quiet moments of mindfulness.",
+  "gallery_themes": [
+    {
+      "eyebrow": "PARK YOGA · COMMUNITY SESSIONS",
+      "title": "Yoga in the open air",
+      "text": "Our little community began outdoors, practising together on the grass. Fresh air, soft evening light and friendly faces — a lovely way to reconnect with your breath and with nature.",
+      "layout": "normal",
+      "link": "",
+      "photos": [
+        {
+          "src": "assets/park-yoga-low-lunge.jpg",
+          "caption": "Low lunge, arms raised",
+          "alt": "A group practising a low lunge with arms raised towards the sun in a woodland clearing"
+        },
+        {
+          "src": "assets/park-yoga-tree-pose.jpg",
+          "caption": "Tree pose (Vrksasana)",
+          "alt": "A person in tree pose with arms raised, silhouetted against the setting sun between tall pine trees"
+        },
+        {
+          "src": "assets/park-yoga-plank.jpg",
+          "caption": "Plank in the park",
+          "alt": "A yoga class holding plank pose on the grass in golden afternoon light"
+        }
+      ]
+    },
+    {
+      "eyebrow": "HATHA YOGA & STRETCHING",
+      "title": "Gentle strength, steady breath",
+      "text": "Classical Hatha postures held with awareness — opening the body, building strength and releasing tension. Every posture can be adapted, so you can always work at your own pace.",
+      "layout": "normal",
+      "link": "",
+      "photos": [
+        {
+          "src": "assets/hatha-mat-practice.jpg",
+          "caption": "Finding your footing",
+          "alt": "Hands and bare feet planted on a green yoga mat in warm window light"
+        },
+        {
+          "src": "assets/hatha-childs-pose.jpg",
+          "caption": "Child's pose (Balasana)",
+          "alt": "A woman resting in child's pose on a red yoga mat, hands together in front of her"
+        },
+        {
+          "src": "assets/stretch-forward-fold.jpg",
+          "caption": "Forward fold (Uttanasana)",
+          "alt": "A person folding forward from standing, hands reaching down towards the floor beside their feet"
+        }
+      ]
+    },
+    {
+      "eyebrow": "MEDITATION & MINDFULNESS",
+      "title": "A moment of stillness",
+      "text": "Every class ends with deep relaxation, and we take time to simply sit, breathe and notice. No experience needed — just a few quiet minutes to arrive, settle and feel at home in yourself.",
+      "layout": "split",
+      "link": "Join us on the mat",
+      "photos": [
+        {
+          "src": "assets/meditation-sunset-mudra.jpg",
+          "caption": "Chin mudra at sunset",
+          "alt": "A hand resting on a knee in chin mudra, with a glowing sunset behind"
+        },
+        {
+          "src": "assets/meditation-circle.jpg",
+          "caption": "Closing circle",
+          "alt": "A teacher sitting cross-legged on a mat facing two smiling students in a park at sunset"
+        }
+      ]
+    }
+  ],
+  "quote_text": "You don't have to be good at yoga.\n*You just have to show up.*",
+  "quote_sub": "Bring your breath, your body and whatever kind of day you've had.",
+  "sched_eyebrow": "COME PRACTISE WITH US",
+  "sched_title": "Your Thursday\n*reset.*",
+  "sched_text": "As autumn settles in, we're moving indoors to a warm, welcoming space for our weekly practice.",
+  "sched_when": "Every Thursday · 8:00–9:15 pm",
+  "sched_when_small": "A 75-minute evening class",
+  "sched_directions": "Get directions",
+  "dates_eyebrow": "AUTUMN / WINTER",
+  "dates_title": "Upcoming class dates",
+  "dates_note": "Please book ahead — spaces are limited.",
+  "dates_list": [
+    {
+      "dow": "THU",
+      "date": "22 October",
+      "time": "8:00 pm"
+    },
+    {
+      "dow": "THU",
+      "date": "29 October",
+      "time": "8:00 pm"
+    },
+    {
+      "dow": "THU",
+      "date": "5 November",
+      "time": "8:00 pm"
+    },
+    {
+      "dow": "THU",
+      "date": "19 November",
+      "time": "8:00 pm"
+    },
+    {
+      "dow": "THU",
+      "date": "3 December",
+      "time": "8:00 pm"
+    },
+    {
+      "dow": "THU",
+      "date": "10 December",
+      "time": "8:00 pm"
+    }
+  ],
+  "dates_btn": "Reserve your space",
+  "dates_disclaimer": "Dates shown for the 2026 autumn/winter season. Please confirm availability when booking.",
+  "pricing_eyebrow": "SIMPLE, FLEXIBLE PRICING",
+  "pricing_title": "Make space\n*for yourself.*",
+  "pricing_text": "Choose the option that works for you. Come when you can, build a regular rhythm when you're ready, and remember that this is your practice.",
+  "kind_title": "Yoga should be accessible.",
+  "kind_text": "If the class fee is difficult for you at the moment, please message me privately. No explanations needed and no questions asked.",
+  "price_cards": [
+    {
+      "eyebrow": "TRY A CLASS",
+      "title": "Drop-in",
+      "currency": "£",
+      "price": "10",
+      "unit": "/ class",
+      "text": "Perfect if you'd like to come along and see how the practice feels.",
+      "button": "Book a single class",
+      "tag": ""
+    },
+    {
+      "eyebrow": "PRACTISE REGULARLY",
+      "title": "Class bundle",
+      "currency": "£",
+      "price": "8",
+      "unit": "/ class",
+      "text": "Buy 4 or more classes and enjoy the reduced rate. Your bundle is valid for 3 full months.",
+      "button": "Ask about a bundle",
+      "tag": "A LITTLE MORE FLEXIBILITY"
+    }
+  ],
+  "faq_eyebrow": "A FEW GENTLE ANSWERS",
+  "faq_title": "First time?\n*You're in good hands.*",
+  "faq_list": [
+    {
+      "q": "Do I need yoga experience?",
+      "a": "Not at all. Beginners are very welcome. I'll encourage you to work at a pace that feels comfortable for your body."
+    },
+    {
+      "q": "What if I'm not flexible?",
+      "a": "You don't need to be flexible to start yoga. The practice is about awareness, breathing and meeting yourself where you are — not achieving a perfect pose."
+    },
+    {
+      "q": "What should I bring?",
+      "a": "Wear comfortable clothes that let you move. Please ask when booking whether mats and any other equipment are provided, or bring your own mat if you have one."
+    },
+    {
+      "q": "Do I need to book in advance?",
+      "a": "Yes, please reserve your place before attending. The venue has limited space so we can keep the class comfortable and intimate."
+    },
+    {
+      "q": "Is yoga suitable for everyone?",
+      "a": "Yoga can often be adapted, but it may not be suitable for every condition or circumstance. Please let Sara know about any injuries, health concerns or access needs when you book your first class."
+    }
+  ],
+  "journal_eyebrow": "YOGA CURIOSITIES",
+  "journal_heading": "Learn to stretch\n*from the experts.*",
+  "journal_image": "assets/cat-stretch.jpg",
+  "journal_alt": "A ginger cat stretching on a wooden floor, front paws reaching far forward and hips raised",
+  "journal_caption": "Stretching, the feline way.",
+  "journal_tag": "FROM THE JOURNAL",
+  "journal_title": "Cat pose (Marjaryasana): what our feline friends can teach us",
+  "journal_text": "Ever watched a cat wake from a nap? Before doing anything else, it stretches — front paws reaching long, hips lifted, spine lengthening, with no rush at all. Yoga borrowed the idea long ago: *Marjaryasana*, or Cat Pose, takes its name from the Sanskrit word for cat.\n\nOn hands and knees you round the spine towards the ceiling, then lift the chest into Cow Pose (*Bitilasana*) as you breathe in. Together they make a gentle warm-up for the back and a lovely way to link movement with breath. The stretch our model is enjoying above is closer to Downward-Facing Dog — another pose inspired by animals.",
+  "journal_try_title": "Try it at home",
+  "journal_steps": [
+    {
+      "text": "Come onto hands and knees, wrists under shoulders, knees under hips."
+    },
+    {
+      "text": "Breathe out: round your back, let the head hang softly."
+    },
+    {
+      "text": "Breathe in: lift the chest and tailbone, letting the belly soften."
+    },
+    {
+      "text": "Repeat for 5–8 slow breaths. Move gently and stop if anything hurts."
+    }
+  ],
+  "journal_link": "Stretch with us on Thursdays",
+  "book_eyebrow": "YOUR MAT IS WAITING",
+  "book_title": "Take a breath.\n*Make a little space.*",
+  "book_text": "Come as you are. Leave a little lighter.",
+  "book_btn_mail": "Message Sara to book",
+  "book_small": "Advance booking is essential. Please get in touch if you have any questions.",
+  "_sizes": {}
 }
